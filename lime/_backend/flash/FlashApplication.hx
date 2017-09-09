@@ -190,7 +190,8 @@ class FlashApplication {
 		if (parent.renderer != null) {
 			
 			parent.renderer.onRender.dispatch ();
-			parent.renderer.flip ();
+			if(parent.renderer.autoFlip)
+				parent.renderer.flip ();
 			
 		}
 		

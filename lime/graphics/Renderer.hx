@@ -20,6 +20,7 @@ class Renderer {
 	public var onRender = new Event<Void->Void> ();
 	public var type:RendererType;
 	public var window:Window;
+	public var autoFlip:Bool;
 	
 	@:noCompletion private var backend:RendererBackend;
 	
@@ -29,6 +30,7 @@ class Renderer {
 		this.window = window;
 		
 		backend = new RendererBackend (this);
+		autoFlip = true;
 		
 		this.window.renderer = this;
 		

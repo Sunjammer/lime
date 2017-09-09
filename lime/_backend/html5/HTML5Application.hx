@@ -249,7 +249,7 @@ class HTML5Application {
 				parent.renderer.render ();
 				parent.renderer.onRender.dispatch ();
 				
-				if (!parent.renderer.onRender.canceled) {
+				if (parent.renderer.autoFlip && !parent.renderer.onRender.canceled) {
 					
 					parent.renderer.flip ();
 					

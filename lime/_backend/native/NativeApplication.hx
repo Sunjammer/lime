@@ -439,7 +439,7 @@ class NativeApplication {
 						renderer.render ();
 						renderer.onRender.dispatch ();
 						
-						if (!renderer.onRender.canceled) {
+						if (renderer.autoFlip && !renderer.onRender.canceled) {
 							
 							renderer.flip ();
 							
